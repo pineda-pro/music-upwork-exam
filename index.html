@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">Brand</div>
+        <div>
+            <a href="#" id="aboutLink">About</a>
+
+        </div>
+    </nav>
+
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About Us</h2>
+            <p>Welcome to our website. Here's some information about us.</p>
+        </div>
+    </div>
+
+    <div class="articles-container">
+        <div class="article">
+            <h2>Article 1</h2>
+            <p>Content for the first article.</p>
+        </div>
+        <div class="article">
+            <h2>Article 2</h2>
+            <p>Content for the second article.</p>
+        </div>
+
+    </div>
+
+    <button id="playMusicBtn">Play Music</button>
+
+    <audio id="backgroundMusic" src="music.mp3"></audio>
+
+    <script>
+        const modal = document.getElementById('aboutModal');
+        const aboutLink = document.getElementById('aboutLink');
+        const closeBtn = document.querySelector('.close');
+
+        aboutLink.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = 'block';
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        const playMusicBtn = document.getElementById('playMusicBtn');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        playMusicBtn.onclick = function() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                playMusicBtn.textContent = 'Pause Music';
+            } else {
+                backgroundMusic.pause();
+                playMusicBtn.textContent = 'Play Music';
+            }
+        }
+    </script>
+</body>
+</html>
