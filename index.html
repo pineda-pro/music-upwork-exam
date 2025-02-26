@@ -10,13 +10,12 @@
 <body>
 
     <nav class="navbar">
-        <div class="navbar-brand">Brand</div>
+        <h1 class="navbar-brand">Brand</h1>
         <div>
             <a href="#" id="aboutLink">About</a>
 
         </div>
     </nav>
-
 
     <div id="aboutModal" class="modal">
         <div class="modal-content">
@@ -38,7 +37,7 @@
 
     </div>
 
-    <button id="playMusicBtn">Play Music</button>
+    <button id="playbutton">Play Music</button>
 
     <audio id="backgroundMusic" src="music.mp3"></audio>
 
@@ -62,7 +61,7 @@
             }
         }
 
-        const playMusicBtn = document.getElementById('playMusicBtn');
+        const playMusicBtn = document.getElementById('playbutton');
         const backgroundMusic = document.getElementById('backgroundMusic');
 
         playMusicBtn.onclick = function() {
