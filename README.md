@@ -4,6 +4,6 @@ Responsive UI
 ![bigspring-light](https://github.com/pineda-pro/music-upwork-exam/blob/master/play-screenshot.png)<br />
 ## 🔑Key Features
 
-- ✨ Built with HTML, CSS, Javascript
+- ✨ Let's move the Next step!
 - 📱 Fully Responsive
 
